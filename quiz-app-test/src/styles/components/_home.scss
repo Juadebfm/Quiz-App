@@ -14,6 +14,7 @@
     h3 {
       color: $main-white;
       font-size: $head-3;
+      font-weight: 500;
       display: flex;
       align-items: start;
       justify-content: center;
@@ -61,6 +62,7 @@
         text-decoration: none;
         color: $main-white;
         font-size: $normal;
+        border-radius: $border-rd;
         transition: 0.2s ease;
 
         &:hover {
@@ -73,6 +75,7 @@
         text-decoration: none;
         color: $main-white;
         font-size: 1rem;
+        border-radius: $border-rd;
         transition: 0.2s ease;
 
         &:hover {
@@ -87,6 +90,37 @@
   background-image: url("../../../public/logosage\ \(6\).jpg");
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 5vh);
+  height: calc(100vh - 15vh);
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  #home-nav {
+    padding: 0.7rem 1.2rem;
+    position: relative;
+    height: 50vh;
+    align-items: center;
+    flex-direction: start;
+    flex-direction: column;
+  }
+
+  #home-nav section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 40px;
+    background-color: transparent;
+  }
+
+  #home-nav section .auth-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .auth-container .login,
+  .auth-container .signup {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HiAcademicCap } from "react-icons/hi";
+import { HiAcademicCap, HiMenu, HiX } from "react-icons/hi";
 const Home = () => {
   return (
     <>
@@ -11,6 +11,7 @@ const Home = () => {
             <span>Quiz App</span>
           </h3>
         </div>
+
         <section>
           <div className="play-btn-container">
             <ul>
