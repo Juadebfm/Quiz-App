@@ -1,0 +1,92 @@
+* {
+  overflow-y: hidden;
+}
+
+#home-nav {
+  background-color: $main-red;
+  height: 5vh;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  div {
+    h3 {
+      color: $main-white;
+      font-size: 2rem;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      gap: 15px;
+
+      .icon {
+        align-self: center;
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .play-btn-container {
+      ul {
+        li {
+          .anchor {
+            color: $main-white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: 0.2s ease;
+
+            &:hover {
+              text-decoration: underline;
+              text-underline-offset: 3px;
+            }
+          }
+        }
+      }
+    }
+
+    .auth-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .login {
+        background-color: $main-blue;
+        padding: 10px 25px;
+        text-decoration: none;
+        color: #f3f3f3;
+        font-size: 1rem;
+        transition: 0.2s ease;
+
+        &:hover {
+          background-color: $main-blue-hue;
+        }
+      }
+      .signup {
+        background-color: $main-blue;
+        padding: 10px 25px;
+        text-decoration: none;
+        color: #f3f3f3;
+        font-size: 1rem;
+        transition: 0.2s ease;
+
+        &:hover {
+          background-color: $main-blue-hue;
+        }
+      }
+    }
+  }
+}
+
+#home {
+  background-image: url("../../../public/logosage\ \(6\).jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 5vh);
+  width: 100%;
+}
