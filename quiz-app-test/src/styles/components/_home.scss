@@ -1,6 +1,6 @@
-* {
-  overflow-y: hidden;
-}
+// * {
+//   overflow-y: hidden;
+// }
 
 #home-nav {
   background-color: $main-red;
@@ -15,6 +15,8 @@
       color: $main-white;
       font-size: $head-3;
       font-weight: 500;
+      padding: 0;
+      margin: 0;
       display: flex;
       align-items: start;
       justify-content: center;

@@ -1,0 +1,54 @@
+.instructions {
+  border: 1px solid darken($off-white, 10%);
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: $nav-pd;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  ol {
+    margin-bottom: 25px;
+  }
+
+  li {
+    margin-top: 18px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .lifeline {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  ::marker {
+    font-weight: bold;
+  }
+
+  .buttons {
+    margin-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instructions {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.5;
+    margin: 1rem -0.05rem;
+    width: 100%;
+  }
+}

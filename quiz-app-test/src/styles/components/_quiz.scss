@@ -1,0 +1,55 @@
+.questions {
+  background-color: $off-white;
+  border-left: 5px solid $main-blue;
+  width: 80%;
+  margin: 1.5rem auto 0 auto;
+  padding: 1.5rem 2.5rem;
+
+  .lifeline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  .timer-option {
+    border-top: 0.5px solid #aaa;
+    padding-top: 1.5rem;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  h5 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .options-container {
+    margin-top: 2rem;
+    display: inline-block;
+    width: 50%;
+
+    .option {
+      width: 70%;
+      margin: auto;
+      background-color: $main-blue;
+      border-radius: 30px;
+      color: $main-white;
+      padding: $btn-pd;
+      transition: 0.3s linear all;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
