@@ -15,6 +15,7 @@ class Quiz extends Component {
   render() {
     return (
       <>
+        <h1 className="main-topic">Quiz Test</h1>
         <div className="questions">
           <div className="lifeline-container">
             <p>
@@ -30,7 +31,8 @@ class Quiz extends Component {
             <p>
               <span>1 of 15</span>
               <span>
-                <span> 3:00</span> <CiTimer />
+                <CiTimer />
+                <span> 3:00</span>
               </span>
             </p>
           </div>
@@ -44,9 +46,9 @@ class Quiz extends Component {
             <p className="option">2000</p>
           </div>
           <div className="button-container">
-            <button>Previous</button>
-            <button>Next</button>
-            <button>Quit</button>
+            <button className="prev">Previous</button>
+            <button className="quit">Quit</button>
+            <button className="next">Next</button>
           </div>
         </div>
       </>

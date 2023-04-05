@@ -1,0 +1,262 @@
+[
+  {
+    "question": "The zeros and ones of binary code is a low-level language because it's closer to being understood by a CPU. JavaScript on the other hand is a high-level language. This means that it has to be converted to binary code so that a CPU can work with it.",
+    "optionA": "True",
+    "optionB": "Not Sure",
+    "optionC": "Don't Know",
+    "optionD": "False",
+    "answer": "True"
+  },
+
+  {
+    "question": "You are building a website using JavaScript. On which end of the site will JavaScript add interactivity to? ",
+    "optionA": "Frontend",
+    "optionB": "Database",
+    "optionC": "Backend",
+    "optionD": "All of the above",
+    "answer": "Frontend"
+  },
+
+  {
+    "question": " In JavaScript you can declare a variable with the keyword var, let and const. Which one of the following statements about all 3 is correct?  ",
+    "optionA": "You use them to change the value of a variable.",
+    "optionB": "They allows you to save a variable so that you can re-use it in future.",
+    "optionC": "They all allow you assign a value to a variable as many times as you want.",
+    "optionD": "None of the above",
+    "answer": "They allows you to save a variable so that you can re-use it in future."
+  },
+
+  {
+    "question": "Which datatype is most useful when writing a variable that stores prices of an item on our website?",
+    "optionA": "String",
+    "optionB": "BigInt",
+    "optionC": "Null",
+    "optionD": "Number",
+    "answer": "Number"
+  },
+
+  {
+    "question": "Which datatype is most useful when writing a variable that stores the name and description of an item on our website?",
+    "optionA": "String",
+    "optionB": "BigInt",
+    "optionC": "Null",
+    "optionD": "Number",
+    "answer": "String"
+  },
+
+  {
+    "question": "What is the data type of the value  true ?",
+    "optionA": "String",
+    "optionB": "BigInt",
+    "optionC": "Boolean",
+    "optionD": "Number",
+    "answer": "Boolean"
+  },
+
+  {
+    "question": "What is the % operator called?",
+    "optionA": "The modulus operator",
+    "optionB": "The division operator",
+    "optionC": "The concatenation operator",
+    "optionD": "Don't Know",
+    "answer": "The modulus operator"
+  },
+
+  {
+    "question": "What happens when you use the + operator on two strings?",
+    "optionA": "They get joined into a single string",
+    "optionB": "You can't use the + operator on two strings",
+    "optionC": "You can, but then you'll become an AGBA DEV",
+    "optionD": "All these is new to me",
+    "answer": "They get joined into a single string"
+  },
+
+  {
+    "question": "What is the operator symbol && represent in JavaScript?",
+    "optionA": "The logical OR operator",
+    "optionB": "The logical AND operator",
+    "optionC": "The logical NOT operator",
+    "optionD": "None of the above",
+    "answer": "The logical AND operator"
+  },
+
+  {
+    "question": "How many columns does Bootstrap's responsive grid consist of?",
+    "optionA": "6 columns",
+    "optionB": "12 columns",
+    "optionC": "Not sure",
+    "optionD": "10 columns",
+    "answer": "12 columns"
+  },
+
+  {
+    "question": "Which CSS property and value change the text to center alignment?",
+    "optionA": "text-align: center",
+    "optionB": "align-self",
+    "optionC": "vertical-align",
+    "optionD": "align-items",
+    "answer": "text-align: center"
+  },
+
+  {
+    "question": "Which CSS property and value change the HTML element to a block-level element?",
+    "optionA": "align-content",
+    "optionB": "content",
+    "optionC": "list-style",
+    "optionD": "display: block",
+    "answer": "display: block"
+  },
+
+  {
+    "question": "How many squares are there on a chess board?",
+    "optionA": "128",
+    "optionB": "64",
+    "optionC": "32",
+    "optionD": "256",
+    "answer": "64"
+  },
+
+  {
+    "question": "When adding an image to a web page, which of the following is the correct HTML tag?",
+    "optionA": "<img/>",
+    "optionB": "<Image/>",
+    "optionC": "<jpg>",
+    "optionD": "<Link>",
+    "answer": "<img/>"
+  },
+
+  {
+    "question": "When using the anchor tag <a>, which attribute determines where the hyperlink links to? ",
+    "optionA": "href",
+    "optionB": "src",
+    "optionC": "link",
+    "optionD": "srcset",
+    "answer": "href"
+  },
+
+  {
+    "question": "The Bootstrap Grid System always starts with which element? ",
+    "optionA": "Container",
+    "optionB": "Row",
+    "optionC": "Column",
+    "optionD": "Component",
+    "answer": "Container"
+  },
+
+  {
+    "question": "A point at which a website's content and design will adapt in order to provide the best user experience is called a ______________.",
+    "optionA": "Design Point",
+    "optionB": "Box Point",
+    "optionC": "Break Point",
+    "optionD": "Devtools",
+    "answer": "Break Point"
+  },
+
+  {
+    "question": "To reference a JavaScript script or file in an HTML document, you use the ______________ tag.",
+    "optionA": "JavaScript",
+    "optionB": "Library",
+    "optionC": "Script",
+    "optionD": "Code",
+    "answer": "Script"
+  },
+
+  {
+    "question": "To reference a CSS file in an HTML document, you use the ______________ tag.",
+    "optionA": "Style",
+    "optionB": "Link",
+    "optionC": "Meta",
+    "optionD": "Html",
+    "answer": "Link"
+  },
+
+  {
+    "question": "You are designing a web page for a small company. They supplied you with an image that needs to be in the center on the landing page. The image has a content width of 100px, 10px padding on both left and right sides, a 10px border on both left and right sides and a 10px margin on both left and right sides. What is the border box width when box sizing is set to content-box?",
+    "optionA": "160px",
+    "optionB": "80px",
+    "optionC": "120px",
+    "optionD": "100px",
+    "answer": "160px"
+  },
+
+  {
+    "question": "When you create a CSS rule, the part inside the curly brackets is called the: ",
+    "optionA": "Value",
+    "optionB": "Declaration Box",
+    "optionC": "Property",
+    "optionD": "Selector",
+    "answer": "Declaration Box"
+  },
+
+  {
+    "question": "The structure of an HTML document starts with:    ",
+    "optionA": "<!DOCTYPE html>",
+    "optionB": "<HTML>",
+    "optionC": "<head>",
+    "optionD": "<body>",
+    "answer": "<!DOCTYPE html>"
+  },
+
+  {
+    "question": "The purpose of a web server is to ____________________.",
+    "optionA": "Receive web pages and display them in the web browser.",
+    "optionB": "Request content from a web browser and receive the response.",
+    "optionC": "Receive requests from a web browser and to respond with the correct content for that request.",
+    "optionD": "None of the above",
+    "answer": "Receive requests from a web browser and to respond with the correct content for that request."
+  },
+
+  {
+    "question": "What does URL stand for in Web Development Technology?",
+    "optionA": "Universal Registration Link",
+    "optionB": "Universal Reversal Location",
+    "optionC": "Universal Resource Locator",
+    "optionD": "Uniform Resource Locator",
+    "answer": "Uniform Resource Locator"
+  },
+
+  {
+    "question": "CSS stands for?",
+    "optionA": "Cascading Styling Sheets",
+    "optionB": "Cascading Styles Sheets",
+    "optionC": "Cascading Styling Software",
+    "optionD": "Cascading Styles Software",
+    "answer": "Cascading Styles Sheets"
+  },
+
+  {
+    "question": "HTML stands for?",
+    "optionA": "Hypertext Markdown Language",
+    "optionB": "Hypertext Markup Language",
+    "optionC": "Hyper Texual Markup Language",
+    "optionD": "Hypertext Multimedia Language",
+    "answer": "Hypertext Markup Language"
+  },
+
+  {
+    "question": "As a developer, it is best to use a _____________ to write and maintain code.",
+    "optionA": "Word Processor",
+    "optionB": "Integrated Development Environment",
+    "optionC": "Web Browser",
+    "optionD": "Development Book",
+    "answer": "Integrated Development Environment"
+  },
+
+  {
+    "question": "The style of a web page is defined using ______________.",
+    "optionA": "HTML",
+    "optionB": "CSS",
+    "optionC": "JavaScript",
+    "optionD": "Unknown",
+    "answer": "CSS"
+  },
+
+  {
+    "question": "When two computers connect directly to each other, this forms  ______________.",
+    "optionA": "the Internet",
+    "optionB": "a Network",
+    "optionC": "a Server",
+    "optionD": "Unknown",
+    "answer": "a Networkgit "
+  }
+]

@@ -1,6 +1,10 @@
+.main-topic {
+    font-size: 3rem;
+    padding-left: 9rem;
+}
 .questions {
   background-color: $off-white;
-  border-left: 5px solid $main-blue;
+  border-left: 5px solid $main-red;
   width: 80%;
   margin: 1.5rem auto 0 auto;
   padding: 1.5rem 2.5rem;
@@ -25,31 +29,80 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
     }
   }
 
   h5 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.5;
     text-align: center;
   }
 
   .options-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: inline-block;
     width: 50%;
 
     .option {
-      width: 70%;
+      width: 80%;
       margin: auto;
-      background-color: $main-blue;
+      cursor: pointer;
+      background-color: $main-red;
       border-radius: 30px;
       color: $main-white;
       padding: $btn-pd;
       transition: 0.3s linear all;
       text-align: center;
       margin-bottom: 1.5rem;
+
+      &:hover {
+        background-color: darken($color: $main-red, $amount: 10%);
+      }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1rem auto;
+    cursor: pointer;
+    padding: 1.5rem;
+    width: 80%;
+    margin-top: 2rem;
+
+    button {
+      border: none;
+      color: $off-white;
+      cursor: pointer;
+      font-family: $quicksand;
+      margin-right: 1rem;
+      padding: $btn-pd;
+    }
+
+    .prev {
+      background-color: $main-green;
+      &:hover {
+        background-color: darken($color: $main-green, $amount: 10%);
+      }
+    }
+    .next {
+      background-color: $main-blue;
+      &:hover {
+        background-color: darken($color: $main-blue, $amount: 10%);
+      }
+    }
+    .quit {
+      background-color: $main-red;
+      &:hover {
+        background-color: darken($color: $main-red, $amount: 10%);
+      }
     }
   }
 }
