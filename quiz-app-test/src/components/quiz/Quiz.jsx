@@ -3,6 +3,7 @@ import { MdOutlineQuiz } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
 import { CiTimer } from "react-icons/ci";
 import M from "materialize-css";
+import Swal from "sweetalert2";
 
 import questions from "../../../src/questions/QuestionsData.json";
 import isEmpty from "../../utils/isEmpty";
@@ -139,8 +140,17 @@ class Quiz extends Component {
   };
 
   handleQuitButtonClick = () => {
-    if (window.confirm("Are you sure you want to quit?")) {
-      window.location.href = "/";
+    if (
+      Swal.fire({
+        title: "Are you sure you want to quit quiz?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#011f5b",
+        cancelButtonColor: "#9b0000",
+        confirmButtonText: "Yes!",
+      })
+    ) {
+      // window.location.href = "/quiz/quizsummary";
     }
   };
 
@@ -299,7 +309,7 @@ class Quiz extends Component {
   };
 
   startTimer = () => {
-    const countDowntime = Date.now() + 300000;
+    const countDowntime = Date.now() + 15000;
     this.interval = setInterval(() => {
       const now = new Date();
       const distance = countDowntime - now;
@@ -332,7 +342,15 @@ class Quiz extends Component {
   };
 
   endGame = () => {
-    alert("Quiz has ended");
+    Swal.fire({
+      title: "Time is up!",
+      text: "Check Scores",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#011f5b",
+      cancelButtonColor: "#9b0000",
+      confirmButtonText: "Yes!",
+    });
     const { state } = this;
     const scores = {
       score: state.score,
@@ -345,7 +363,7 @@ class Quiz extends Component {
     };
     console.log(scores);
     setTimeout(() => {
-      window.location.href = "/";
+      // window.location.href = "/quiz/quizsummary";
     }, 1000);
   };
 
