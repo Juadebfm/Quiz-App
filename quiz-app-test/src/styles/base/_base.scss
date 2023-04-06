@@ -18,3 +18,9 @@ body {
   border-radius: 5px !important;
   color: $off-white !important;
 }
+
+.disable {
+  background-color: #aaa !important;
+  pointer-events: none !important;
+  opacity: 0.9 !important;
+}

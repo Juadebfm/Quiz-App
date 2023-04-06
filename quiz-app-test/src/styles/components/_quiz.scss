@@ -1,6 +1,6 @@
 .main-topic {
-    font-size: 3rem;
-    padding-left: 9rem;
+  font-size: 3rem;
+  padding-left: 9rem;
 }
 .questions {
   background-color: $off-white;
@@ -19,6 +19,15 @@
       align-items: center;
       justify-content: center;
       gap: 5px;
+
+      .lifeline {
+        color: $main-green;
+        cursor: pointer;
+
+        &:hover {
+          color: darken($color: $main-green, $amount: 10%);
+        }
+      }
     }
   }
 
