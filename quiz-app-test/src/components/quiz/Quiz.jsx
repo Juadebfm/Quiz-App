@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { MdOutlineQuiz } from "react-icons/md";
 import { HiLightBulb } from "react-icons/hi";
+import { BsCheckCircle } from "react-icons/bs";
 import { CiTimer } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import M from "materialize-css";
 import Swal from "sweetalert2";
+import ReactModal from "react-modal";
 
 import questions from "../../../src/questions/QuestionsData.json";
 import isEmpty from "../../utils/isEmpty";
@@ -30,6 +33,9 @@ class Quiz extends Component {
       time: {},
     };
     this.interval = null;
+    this.modal = {
+      showModal: false,
+    };
   }
 
   componentDidMount() {
@@ -131,26 +137,8 @@ class Quiz extends Component {
       case "prev":
         this.handlePrevButtonClick();
         break;
-      case "quit":
-        this.handleQuitButtonClick();
-        break;
       default:
         break;
-    }
-  };
-
-  handleQuitButtonClick = () => {
-    if (
-      Swal.fire({
-        title: "Are you sure you want to quit quiz?",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#011f5b",
-        cancelButtonColor: "#9b0000",
-        confirmButtonText: "Yes!",
-      })
-    ) {
-      // window.location.href = "/quiz/quizsummary";
     }
   };
 
@@ -309,7 +297,7 @@ class Quiz extends Component {
   };
 
   startTimer = () => {
-    const countDowntime = Date.now() + 15000;
+    const countDowntime = Date.now() + 150000;
     this.interval = setInterval(() => {
       const now = new Date();
       const distance = countDowntime - now;
@@ -367,6 +355,14 @@ class Quiz extends Component {
     }, 1000);
   };
 
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
   render() {
     const {
       currentQuestion,
@@ -375,10 +371,101 @@ class Quiz extends Component {
       hints,
       fiftyFifty,
       time,
+      score,
+      numberOfAnsweredQuestions,
+      correctAnswers,
+      wrongAnswers,
     } = this.state;
+    let stats;
+    let remark;
+
+    if (numberOfAnsweredQuestions > 0) {
+      stats = (
+        <>
+          <div>
+            <BsCheckCircle />
+          </div>
+          <h1>Quiz has ended</h1>
+          <div className="container">
+            <h4>{remark}</h4>
+            <h2>Your Score: {this.state.score.toFixed(0)}&#37;</h2>
+            <span className="stat-left">Total number of questions:</span>
+            <span className="stat-right">{this.state.numberOfQuestions}</span>
+            <br />
+            <span className="stat-left">
+              Total number of questions answered:
+            </span>
+            <span className="stat-right">
+              {this.state.numberOfAnsweredQuestions}
+            </span>
+            <br />
+            <span className="stat-left">Total number of wrong answers:</span>
+            <span className="stat-right">{this.state.wrongAnswers}</span>
+            <br />
+            <span className="stat-left">Total number of correct answers:</span>
+            <span className="stat-right">{this.state.correctAnswers}</span>
+            <br />
+          </div>
+          <section>
+            <ul>
+              <li>
+                <Link to="/">Back to Home</Link>
+              </li>
+              <li>
+                <Link to="/quiz">Play again</Link>
+              </li>
+            </ul>
+          </section>
+        </>
+      );
+    } else {
+      stats = (
+        <section>
+          <h1 className="no-stats">No Statistics Available</h1>;
+          <ul>
+            <li>
+              <Link to="/">Back to Home</Link>
+            </li>
+            <li>
+              <Link to="#" onClick={this.handleCloseModal}>
+                Take a quiz
+              </Link>
+            </li>
+          </ul>
+        </section>
+      );
+    }
+
+    if (score <= 30) {
+      remark = "You need more practice!";
+    } else if (score > 30 && score <= 50) {
+      remark = "Better luck next time";
+    } else if (score <= 70 && score > 50) {
+      remark = "You can do better";
+    } else if (score >= 71 && score <= 84) {
+      remark = "You did great";
+    } else {
+      remark = "Excellent score";
+    }
+
     return (
       <>
-        <h1 className="main-topic">Quiz Test</h1>
+        <div className="header">
+          <h1 className="main-topic">Test</h1>
+          <div className="scores">
+            <button className="scoresBtn" onClick={this.handleOpenModal}>
+              Test Scores
+            </button>
+            <ReactModal
+              ariaHideApp={false}
+              isOpen={this.state.showModal}
+              contentLabel="Example Modal"
+              onRequestClose={this.handleCloseModal}
+            >
+              {stats}
+            </ReactModal>
+          </div>
+        </div>
         <div className="questions">
           <div className="lifeline-container">
             <p>
@@ -431,13 +518,7 @@ class Quiz extends Component {
             >
               Previous
             </button>
-            <button
-              onClick={this.handleQuitButtonClick}
-              id="quit"
-              className="quit"
-            >
-              Quit
-            </button>
+
             <button
               id="next"
               className="next"

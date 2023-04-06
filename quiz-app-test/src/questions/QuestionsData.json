@@ -249,14 +249,5 @@
     "optionC": "JavaScript",
     "optionD": "Unknown",
     "answer": "CSS"
-  },
-
-  {
-    "question": "When two computers connect directly to each other, this forms  ______________.",
-    "optionA": "the Internet",
-    "optionB": "a Network",
-    "optionC": "a Server",
-    "optionD": "Unknown",
-    "answer": "a Network"
   }
 ]
