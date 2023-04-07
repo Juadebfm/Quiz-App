@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HiAcademicCap, HiMenu, HiX } from "react-icons/hi";
+import { HiAcademicCap } from "react-icons/hi";
+
 const Home = () => {
   return (
     <>
@@ -22,14 +23,14 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <div className="auth-container">
+          {/* <div className="auth-container">
             <Link to="/login" className="login">
               Login
             </Link>
             <Link to="/signup" className="signup">
               Signup
             </Link>
-          </div>
+          </div> */}
         </section>
       </div>
       <div id="home"></div>

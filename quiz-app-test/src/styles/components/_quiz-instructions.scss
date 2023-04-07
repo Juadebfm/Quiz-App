@@ -11,19 +11,20 @@
     margin-top: 25px;
   }
 
-  ol {
+  ul {
     margin-bottom: 25px;
   }
 
   li {
     margin-top: 18px;
-    padding-left: 25px;
+    padding-left: 0px;
     margin-bottom: 10px;
   }
 
   .lifeline {
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    color: $main-green;
   }
 
   ::marker {
@@ -31,18 +32,61 @@
   }
 
   .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 25px;
     padding-bottom: 25px;
+
+    .left {
+      transition: 0.3s ease;
+      border: none;
+      background-color: $main-blue;
+      cursor: pointer;
+      font-family: $quicksand;
+      margin-right: 1rem;
+      padding: $btn-pd;
+      &:hover {
+        background-color: $main-blue-hue;
+      }
+      a {
+        color: $main-white;
+      }
+    }
+    .right {
+      transition: 0.3s ease;
+      border: none;
+      background-color: $main-blue;
+      cursor: pointer;
+      font-family: $quicksand;
+      margin-right: 1rem;
+      padding: $btn-pd;
+      &:hover {
+        background-color: $main-blue-hue;
+      }
+      a {
+        color: $main-white;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   .instructions {
+    width: 100%;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.5rem;
+    .buttons {
+      .left {
+        padding: 10px 15px;
+      }
+      .right {
+        padding: 10px 15px;
+      }
+    }
   }
 
   h1 {

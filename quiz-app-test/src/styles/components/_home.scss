@@ -94,15 +94,15 @@
 
 @media (max-width: 768px) {
   #home-nav {
-    padding: 0.7rem 1.2rem;
-    position: relative;
-    height: 50vh;
+    padding: 1.5rem 1.2rem;
+    height: max-content;
+    display: flex;
     align-items: center;
-    flex-direction: start;
     flex-direction: column;
   }
 
   #home-nav section {
+    margin-top: 2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;

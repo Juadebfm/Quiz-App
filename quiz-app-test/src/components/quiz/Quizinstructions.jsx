@@ -8,18 +8,18 @@ import Answer from "../../assets/logosage (6).jpg";
 const Quizinstructions = () => {
   return (
     <>
-      <div className="instructions container">
+      <div className="instructions">
         <h1>Instructions</h1>
         <p>
           Ensure you read the instructions carefully before attempting the tests
           in the test section
         </p>
-        <ol className="browser-default" id="main-list">
+        <ul className="browser-default" id="main-list">
           <li>
-            The test has a duration of 15 minutes and ends as soon as your time
+            The test has a duration of 3 minutes and ends as soon as your time
             elapse
           </li>
-          <li>Each test consist of 15 questions</li>
+          <li>Each test consist of 28 questions</li>
           <li>
             Every question contains 4 options
             <img src={Answer} alt="Quiz app" />
@@ -38,22 +38,24 @@ const Quizinstructions = () => {
           </li>
           <li>
             Selecting 50-50 lifeline by clicking the icon{" "}
-            <MdOutlineQuiz className="lifeline" /> will remove 2 wrong answers,
-            leaving the correct answers and one wrog answers
+            <MdOutlineQuiz className="lifeline" /> will remove{" "}
+            <b>2 wrong answers</b>, leaving one correct answer and one wrong
+            answer
             <img src={Answer} alt="" />
           </li>
           <li>
-            Using a hint by clicking the icon <HiLightBulb className="lifeline"/> will remove one
-            wrong answer leaving two wrong answers and one correct answer. You
+            Using a hint by clicking the icon{" "}
+            <HiLightBulb className="lifeline" /> will remove one wrong answer
+            leaving <b>two wrong answers</b> and <b>one correct answer</b>. You
             can use as many as possible on a single question.{" "}
           </li>
           <li>
-            Canceling the test at any time sums up your current scores and
-            displays that to you
+            You can quit test when it has started except your time runs out or
+            you click the "Test Scores" button.
           </li>
           <li>The timer starts as soon as the Test loads</li>
           <li>Let's do this if you think you've got what it takes</li>
-        </ol>
+        </ul>
         <div className="buttons">
           <span className="left">
             <Link to="/">Back to Homepage</Link>
