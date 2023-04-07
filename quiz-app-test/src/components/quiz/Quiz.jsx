@@ -357,10 +357,10 @@ class Quiz extends Component {
     this.setState({ showModal: false });
   };
 
-  handleTakeTestAgainClick = () => {
-    this.handleCloseModal();
-    window.location.reload();
-  };
+  // handleTakeTestAgainClick = () => {
+  //   this.handleCloseModal();
+  //   window.location.reload();
+  // };
 
   customStyles = {
     content: {
@@ -435,11 +435,6 @@ class Quiz extends Component {
                 <li>
                   <Link to="/">Back to Home</Link>
                 </li>
-                <li>
-                  <Link to="/quiz" onClick={this.handleTakeTestAgainClick}>
-                    Take test again
-                  </Link>
-                </li>
               </ul>
             </section>
           </div>
@@ -453,11 +448,6 @@ class Quiz extends Component {
             <li>
               <Link to="/">Back to Home</Link>
             </li>
-            <li>
-              <Link to="#" onClick={this.handleTakeTestAgainClick}>
-                Take quiz
-              </Link>
-            </li>
           </ul>
         </section>
       );
@@ -469,7 +459,7 @@ class Quiz extends Component {
           <h1 className="main-topic">Test</h1>
           <div className="scores">
             <button className="scoresBtn" onClick={this.handleOpenModal}>
-              Test Scores
+              End Test{" "}
             </button>
             <ReactModal
               style={this.customStyles}
